@@ -1,0 +1,165 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #1a73e8, #0d47a1);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffca28;
+}
+
+.banner {
+    background: linear-gradient(90deg, #ff4444, #d81b60);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 4px solid #ffca28;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.banner button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #ffca28;
+    border: none;
+    color: #d81b60;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: transform 0.2s;
+}
+
+.banner button:hover {
+    transform: scale(1.05);
+}
+
+.comics-list {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.comics-list h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #1a73e8;
+}
+
+.comic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.comic-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.comic-card:hover {
+    transform: translateY(-5px);
+}
+
+.comic-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.comic-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #d81b60;
+}
+
+.comic-card p {
+    margin: 0 10px 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.reader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reader-header {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.reader-header h2 {
+    color: white;
+    margin: 0;
+}
+
+.reader-header button {
+    padding: 10px 20px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comic-page img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 2px solid #ffca28;
+}
+
+.hidden {
+    display: none;
+}
