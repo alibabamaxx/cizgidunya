@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çizgi Roman Platformu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #141414;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #e50914;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            color: #e50914;
+        }
+
+        .banner {
+            position: relative;
+            height: 500px;
+            background: url('https://via.placeholder.com/1920x500?text=Haftanın+Çizgi+Romanı') center/cover no-repeat;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .banner-content {
+            max-width: 500px;
+        }
+
+        .banner-content h2 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .banner-content p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .banner-content button {
+            background: #e50914;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .banner-content button:hover {
+            background: #f40612;
+        }
+
+        .popular-section, .all-comics-section {
+            padding: 20px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            margin: 20px 0;
+        }
+
+        .popular-list {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding-bottom: 10px;
+        }
+
+        .popular-list::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .popular-list::-webkit-scrollbar-thumb {
+            background: #e50914;
+            border-radius: 10px;
+        }
+
+        .comic-item {
+            flex: 0 0 200px;
+            background: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .comic-item:hover {
+            transform: scale(1.05);
+        }
+
+        .comic-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .comic-item h4 {
+            color: #333;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .comic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            .banner {
+                height: 300px;
+            }
+
+            .banner-content h2 {
+                font-size: 1.5em;
+            }
+
+            .banner-content p {
+                font-size: 1em;
+            }
+
+            .comic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Çizgi Roman</h1>
+        <nav>
+            <a href="#">Ana Sayfa</a>
+            <a href="#">Kategoriler</a>
+            <a href="#">Favoriler</a>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="banner-content">
+            <h2>Haftanın Çizgi Romanı</h2>
+            <p>Bu hafta "Galaksi Savaşçıları" ile maceraya atılın!</p>
+            <button onclick="window.location.href='comic1.html'">Oku</button>
+        </div>
+    </section>
+
+    <section class="popular-section">
+        <h3>Popüler Çizgi Romanlar</h3>
+        <div class="popular-list">
+            <a href="comic1.html" class="comic-item">
+                <img src="https://via.placeholder.com/200x300?text=Popüler+1" alt="Popüler 1">
+                <h4>Gizemli Yolculuk</h4>
+            </a>
+            <a href="comic2.html" class="comic-item">
+                <img src="https://via.placeholder.com/200x300?text=Popüler+2" alt="Popüler 2">
+                <h4>Karanlık Kahraman</h4>
+            </a>
+            <a href="comic3.html" class="comic-item">
+                <img src="https://via.placeholder.com/200x300?text=Popüler+3" alt="Popüler 3">
+                <h4>Sonsuz Evren</h4>
+            </a>
+            <a href="comic4.html" class="comic-item">
+                <img src="https://via.placeholder.com/200x300?text=Popüler+4" alt="Popüler 4">
+                <h4>Zaman Gezgini</h4>
+            </a>
+        </div>
+    </section>
+
+    <section class="all-comics-section">
+        <h3>Tüm Çizgi Romanlar</h3>
+        <div class="comic-grid">
+            <a href="comic1.html" class="comic-item">
+                <img src="https://via.placeholder.com/200x300?text=Kapak+1" alt="Çizgi Roman 1">
+                <h4>Galaksi Savaşçıları</h4>
+            </a>
+            <a href="comic2.html" class="comic-item">
+                <img src="https://via.placeholder.com/200x300?text=Kapak+2" alt="Çizgi Roman 2">
+                <h4>Gizemli Kahraman</h4>
+            </a>
+            <a href="comic3.html" class="comic-item">
+                <img src="https://via.placeholder.com/200x300?text=Kapak+3" alt="Çizgi Roman 3">
+                <h4>Sonsuz Savaş</h4>
+            </a>
+            <a href="comic4.html" class="comic-item">
+                <img src="https://via.placeholder.com/200x300?text=Kapak+4" alt="Çizgi Roman 4">
+                <h4>Evrenin Sonu</h4>
+            </a>
+        </div>
+    </section>
+</body>
+</html>
